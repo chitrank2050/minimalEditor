@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head Section -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Editor</title>
+    <!--Custom CSS file-->
+      <link rel='stylesheet' type='text/css' href='css/editor.css'>
+    <!-- Minified bootstrap css -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Minified fontawesome css -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- google Roboto font -->
+      <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <!-- minified jQuery-->
+      <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <!--jQuery css -->
+      <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <!-- Script for Bootstrap Nav tooltip -->
+      <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
+<head>
+<!-- End of Head section-->
+<!-- Body Section -->
+<body>
+  <!-- Navigation -->
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <span class="navbar-brand" id="navHeader" data-toggle="tooltip" title="Editor" data-placement="bottom">Text Editor</span>
+             </div>
+             <ul class="nav navbar-nav" id="me">
+               <li><a href="http://www.chitrankagnihotri.com/" target="_blank" data-toggle="tooltip" title="Me" data-placement="bottom">Chitrank Agnihotri&nbsp;<img src="img/me.jpg" class="img-circle"/></a></li>
+             </ul>
+             <div class="collapse navbar-collapse" id="navLink">
+                 <ul class="nav navbar-nav navbar-right">
+                     <li>
+                         <a href="#" id="about" data-toggle="tooltip" title="About project" data-placement="bottom">About</a>
+                     </li>
+                     <li>
+                       <button type="button" id="done" class="btn btn-warning" data-toggle="tooltip" title="Find links" data-placement="bottom">Done</button>
+                     </li>
+                     <li>
+                       <button type="button" id="changeRandom" onclick="Randomize();" class="btn btn-danger" data-toggle="tooltip" title="Random words" data-placement="bottom">Randomize</button>
+                     </li>
+                 </ul>
+             </div>
+          </div>
+         <!-- /.navbar -->
+     </nav>
+    <!--Hidden Tooltip of bold,underline and text color -->
+      <div id="menu" class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-primary" onclick="edit(&quot;bold&quot;,null)"><i class="fa fa-bold"></i></button>
+          <button type="button" class="btn btn-primary" onclick="edit(&quot;underline&quot;,null)"><i class="fa fa-underline"></i></button>
+          <button type="button" class="btn btn-primary" onclick="setColor();"><i class="fa fa-pencil-square-o"></i></button>
+      </div>
+
+      <!-- Main content area -->
+       <div class="row" id="container">
+          <div class="col-md-10 col-md-offset-2">
+            <div class='editArea' id="main" contenteditable="true">
+              <span class="ui-icon" id="handle"></span><p class="draggable" id="para" contenteditable="true" data-placeholder="Type here.."></p>
+            </div>
+          </div>
+        </div>
+        <!--anchorBox for links-->
+          <div class="row">
+            <div class="col-md-12">
+              <div id="anchorBox"></div>
+            </div>
+          </div>
+    <!-- Drag and Drop library and Js file-->
+          <script type="text/javascript" charset="utf-8" src="drag-drop.js"></script>
+        	<script type="text/javascript" src="js/drag.js"></script>
+    <!--Custom js-->
+          <script src='js/editor.js'></script>
+          <script src="js/random.js"></script>
+          <script src="js/button.js"></script>
+    <!--Minified Bootstrap JS -->
+          <script src="js/bootstrap.min.js"></script>
+  <!--body section ends-->
+</body>
+</html>
+
+/********************************************** END *************************************************/
