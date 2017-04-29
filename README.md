@@ -1,7 +1,7 @@
 # minimalEditor
 
 ##Synopsis
-   A minimal text editor created on Front-End which contains several functionality.
+   A minimal text edito, which contains several functionality.
    
    
 ##Download 
@@ -17,4 +17,4 @@
 
 ##Find me
   <br/>
-  http://www.chitrankagnihotri.com/
+  https://chitrankagnihotri.herokuapp.com
